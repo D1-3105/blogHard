@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{%for msghead in messages%}
+    <div class="jumbotron">
+        <h1>{{msg.author.username}}</h1>
+        <h2>{{msg.title}}</h2>
+        <p class="lead">{{msg.text}}</p>
+        <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">Answer</a>
+      </div>
+{%endfor%}
+{%endblock content%}

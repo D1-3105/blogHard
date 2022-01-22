@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', include('blog_board.urls'))
+    path('messages/', include('blog_board.urls'), name='msgsMain')
 ]

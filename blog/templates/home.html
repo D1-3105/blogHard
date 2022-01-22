@@ -1,12 +1,15 @@
 {%extends 'base.html'%}
 
 {%block content%}
-{%for msghead in messages%}
-    <div class="jumbotron">
-        <h1>{{msg.author.username}}</h1>
-        <h2>{{msg.title}}</h2>
-        <p class="lead">{{msg.text}}</p>
-        <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">Answer</a>
-      </div>
+<ul>
+{%for msg in messages%}
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1>{{msg.author.username}}</h1>
+            <h2><a href="{%url 'msg_detail' msg.pk%}">{{msg.title}}</a></h2>
+            <p class="lead">{{msg.text}}</p>
+          </div>
+    </main>
 {%endfor%}
+</ul>
 {%endblock content%}

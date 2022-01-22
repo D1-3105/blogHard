@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>MESSAGE ID IS {{msg.id}}</h1>
+<div class="h-100 row align-items-center">
+    <h1>{{msg.author}}</h1>
+    <h2>{{msg.title}}</h2>
+    <p>{{msg.text}}</p>
+</div>
+{%endblock content%}

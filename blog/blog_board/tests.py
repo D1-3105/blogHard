@@ -38,6 +38,6 @@ class TestTemplates(TestCase):
                              text=self.txt
                              )
     def test_template_by_url(self):
-        resp=self.client.get(reverse('posts_messages_user'))
+        resp=self.client.get(reverse('all_messages'))
         self.assertEqual(resp.status_code, 200)
 # Create your tests here.
